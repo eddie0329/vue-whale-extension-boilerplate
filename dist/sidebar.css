@@ -1,0 +1,198 @@
+/*! https://mubaidr.github.io/bulma-fluent | MIT License | github.com/mubaidr/bulma-fluent */
+/*! bulma.io v0.8.0 | MIT License | github.com/jgthms/bulma */
+@keyframes spinAround {
+  from {
+    transform: rotate(0deg); }
+  to {
+    transform: rotate(359deg); } }
+
+ .tabs {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none; }
+
+ .tabs:not(:last-child) {
+  margin-bottom: 1.5rem; }
+
+/*! minireset.css v0.0.6 | MIT License | github.com/jgthms/minireset.css */
+html,
+body,
+p,
+dt,
+legend,
+hr,
+h1,
+h4 {
+  margin: 0;
+  padding: 0; }
+
+h1,
+h4 {
+  font-size: 100%;
+  font-weight: normal; }
+
+button,
+input {
+  margin: 0; }
+
+html {
+  box-sizing: border-box; }
+
+*, *::before, *::after {
+  box-sizing: inherit; }
+
+
+th {
+  padding: 0; }
+  
+  th:not([align]) {
+    text-align: left; }
+
+html {
+  background-color: white;
+  font-size: 16px;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  min-width: 300px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  text-rendering: optimizeLegibility;
+  text-size-adjust: 100%; }
+
+
+section {
+  display: block; }
+
+body,
+button,
+input {
+  font-family: "Segoe UI", "Calibri", "Arial"; }
+
+body {
+  color: rgba(9, 38, 66, 0.95);
+  font-size: 1em;
+  font-weight: 400;
+  line-height: 1.5; }
+
+a {
+  color: rgba(55, 122, 195, 0.95);
+  cursor: pointer;
+  text-decoration: none; }
+  a strong {
+    color: currentColor; }
+  a:hover {
+    color: rgba(0, 18, 46, 0.95); }
+
+hr {
+  background-color: whitesmoke;
+  border: none;
+  display: block;
+  height: 2px;
+  margin: 1.5rem 0; }
+
+input[type="checkbox"],
+input[type="radio"] {
+  vertical-align: baseline; }
+
+span {
+  font-style: inherit;
+  font-weight: inherit; }
+
+strong {
+  color: rgba(0, 18, 46, 0.95);
+  font-weight: 700; }
+
+@keyframes moveIndeterminate {
+  from {
+    background-position: 200% 0; }
+  to {
+    background-position: -200% 0; } }
+
+.tabs {
+  -webkit-overflow-scrolling: touch;
+  align-items: stretch;
+  display: flex;
+  font-size: 1rem;
+  justify-content: space-between;
+  overflow: hidden;
+  overflow-x: auto;
+  white-space: nowrap; }
+  .tabs a {
+    align-items: center;
+    border-bottom-color: #dbdbdb;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    color: rgba(9, 38, 66, 0.95);
+    display: flex;
+    justify-content: center;
+    margin-bottom: -1px;
+    padding: 0.5em 1em;
+    vertical-align: top; }
+    .tabs a:hover {
+      border-bottom-color: rgba(0, 18, 46, 0.95);
+      color: rgba(0, 18, 46, 0.95); }
+
+@keyframes progress-bar {
+  0% {
+    left: 10%; }
+  17% {
+    left: 65%; }
+  34% {
+    left: 15%; }
+  51% {
+    left: 60%; }
+  68% {
+    left: 20%; }
+  85% {
+    left: 55%; }
+  100% {
+    left: 10%; } }
+
+@keyframes orbit {
+  0% {
+    opacity: 1;
+    z-index: 99;
+    transform: rotate(180deg);
+    animation-timing-function: ease-out; }
+  7% {
+    opacity: 1;
+    transform: rotate(300deg);
+    animation-timing-function: linear;
+    origin: 0%; }
+  30% {
+    opacity: 1;
+    transform: rotate(410deg);
+    animation-timing-function: ease-in-out;
+    origin: 7%; }
+  39% {
+    opacity: 1;
+    transform: rotate(645deg);
+    animation-timing-function: linear;
+    origin: 30%; }
+  70% {
+    opacity: 1;
+    transform: rotate(770deg);
+    animation-timing-function: ease-out;
+    origin: 39%; }
+  75% {
+    opacity: 1;
+    transform: rotate(900deg);
+    animation-timing-function: ease-out;
+    origin: 70%; }
+  76% {
+    opacity: 0;
+    transform: rotate(900deg); }
+  100% {
+    opacity: 0;
+    transform: rotate(900deg); } }
+
+input,
+button {
+  border-width: 2px !important;
+  transition: all 600ms cubic-bezier(0.16, 1, 0.29, 0.99); }
+
+hr {
+  background-color: rgba(0, 0, 0, 0.075); }
+
