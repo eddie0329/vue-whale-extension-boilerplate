@@ -13,6 +13,8 @@ const PurgecssPlugin = require("purgecss-webpack-plugin");
 const isDevMode = process.env.NODE_ENV === "development";
 
 const config = {
+    mode: "development",
+    watch: true,
     devtool: isDevMode ? "eval-source-map" : false,
     context: path.resolve(__dirname, "./src"),
     entry: {
@@ -97,14 +99,48 @@ const config = {
     plugins: [
         new VueLoaderPlugin(),
         new CleanWebpackPlugin({
-            cleanStaleWebpackAssets: false
+            verbose: true
+            // cleanStaleWebpackAssets: false
         }),
-        new CopyWebpackPlugin([
-            { from: "assets", to: "assets" },
-            { from: "manifest.json", to: "manifest.json", flatten: true }
-        ]),
+        new CopyWebpackPlugin(
+            [
+                {
+                    from: path.join(__dirname, "src/assets"),
+                    to: path.join(__dirname, "dist/assets"),
+                    force: true
+                }
+            ],
+            {
+                logLevel: "info",
+                copyUnmodified: true
+            }
+        ),
+        new CopyWebpackPlugin(
+            [
+                {
+                    from: path.join(__dirname, "src/manifest.json"),
+                    to: path.join(__dirname, "dist"),
+                    force: true,
+                    transform: function(content, path) {
+                        // generates the manifest file using the package.json informations
+                        return Buffer.from(
+                            JSON.stringify({
+                                description:
+                                    process.env.npm_package_description,
+                                version: process.env.npm_package_version,
+                                ...JSON.parse(content.toString())
+                            })
+                        );
+                    }
+                }
+            ],
+            {
+                logLevel: "info",
+                copyUnmodified: true
+            }
+        ),
         new HtmlWebpackPlugin({
-            title: "Popup",
+            title: "sidebar",
             template: "./index.html",
             filename: "sidebar.html",
             chunks: ["sidebar"]
