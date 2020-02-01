@@ -1,14 +1,22 @@
 # vue-whale-extension-boilerplate
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors)
+Boilerplate for Whale extension using Vue.js and Webpack with Hot Reloading Enabled.
+This boilerplate is only use for sideber application.
 
-Boilerplate for Chrome extension using Vue.js and Webpack with Hot Reloading Enabled
+## Usage
+
+```json
+// after clone this respository
+
+npm install
+
+```
 
 ## Scripts
 
 ```json
 // build extension and watch for changes
-npm run dev
+npm run watch
 
 // build extension zip
 npm run build
@@ -16,6 +24,11 @@ npm run build
 // lint all source files
 npm run lint
 ```
+
+## HEADS UP
+
+Before production need to remove hot reloaded codes. It is in `src/background/index.js`
+and `src/sidebar/index.js` that wrapped around with comments.
 
 ## reference
 
