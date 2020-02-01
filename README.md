@@ -30,6 +30,6 @@ npm run lint
 Before production need to remove hot reloaded codes. It is in `src/background/index.js`
 and `src/sidebar/index.js` that wrapped around with comments.
 
-## reference
+### reference
 
 [mubaidr](https://github.com/mubaidr/vue-chrome-extension-boilerplate#contributors)
