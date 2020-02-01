@@ -3,7 +3,8 @@
     "name": "vue-whale-extension-boilerplate",
     "version": "1.0.0",
     "background": {
-        "scripts": ["./background.js"]
+        "scripts": ["./background.js"],
+        "persistent": false
     },
     "sidebar_action": {
         "default_page": "./sidebar.html",
@@ -34,7 +35,8 @@
         "background",
         "storage",
         "tabs",
-        "webRequest"
+        "webRequest",
+        "management"
     ],
     "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }

@@ -1,10 +1,21 @@
-import Vue from 'vue'
-import 'bulma-fluent/bulma.sass'
+import Vue from "vue";
+import "bulma-fluent/bulma.sass";
 
-import App from './App.vue'
+import App from "./App.vue";
 
 // eslint-disable-next-line
 new Vue({
-  el: '#app',
-  render: h => h(App),
-})
+    el: "#app",
+    render: h => h(App)
+});
+
+// hotReloaded
+(function hotReload() {
+    whale.runtime.onMessage.addListener((message, sender, sendResponse) => {
+        if (message === "reload") {
+            location.reload();
+            sendResponse("RELOAD_SUCCESS");
+        }
+        return true;
+    });
+})();

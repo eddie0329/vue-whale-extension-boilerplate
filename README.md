@@ -19,4 +19,4 @@ npm run lint
 
 ## reference
 
-[mubaidr](https://github.com/mubaidr/vue-chrome-extension-boilerplate#contributors);
+[mubaidr](https://github.com/mubaidr/vue-chrome-extension-boilerplate#contributors)
