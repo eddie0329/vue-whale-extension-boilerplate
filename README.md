@@ -1,4 +1,4 @@
-# vue-whale-extension-boilerplate
+# vue-whale-extension-boilerplate:whale:
 
 Boilerplate for Whale extension using Vue.js and Webpack with Hot Reloading Enabled.
 This boilerplate is only use for sideber application.
@@ -25,7 +25,7 @@ npm run build
 npm run lint
 ```
 
-## HEADS UP
+## :rotating_light:HEADS UP
 
 Before production need to remove hot reloaded codes. It is in `src/background/index.js`
 and `src/sidebar/index.js` that wrapped around with comments.
