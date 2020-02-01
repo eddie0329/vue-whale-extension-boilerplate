@@ -9,7 +9,9 @@ new Vue({
     render: h => h(App)
 });
 
-// hotReloaded
+/** ****************************************************************************
+ *                                 HOT RELOAD                                   *
+ *******************************************************************************/
 (function hotReload() {
     whale.runtime.onMessage.addListener((message, sender, sendResponse) => {
         if (message === "reload") {
@@ -19,3 +21,4 @@ new Vue({
         return true;
     });
 })();
+/** ****************************************************************************/
