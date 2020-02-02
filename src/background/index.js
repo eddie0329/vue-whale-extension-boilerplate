@@ -24,16 +24,11 @@ const timestampForFilesInDirectory = dir =>
     );
 
 const reload = () => {
-    whale.runtime.sendMessage("reload", response => {
-        try {
-            if (response === "RELOAD_SUCCESS") {
-                location.reload();
-            } else {
-                throw new Error("FAIL_RELOAD");
-            }
-        } catch (error) {
-            // console.error(error);
+    whale.tabs.query({ active: true, currentWindow: true }, tabs => {
+        if (tabs[0]) {
+            whale.tabs.reload(tabs[0].id);
         }
+        whale.runtime.reload();
     });
 };
 
